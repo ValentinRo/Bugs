@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#161826">
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" fill="#161826"></rect>
+    <path d="M60 14 L90 25 V50 C90 76 77 92 60 100 C43 92 30 76 30 50 V25 Z" fill="none" stroke="#9184d9" stroke-width="4"></path>
+    <circle cx="55" cy="52" r="16" fill="none" stroke="#e9e9ed" stroke-width="4"></circle>
+    <line x1="66" y1="63" x2="78" y2="75" stroke="#e9e9ed" stroke-width="4" stroke-linecap="round"></line>
+    <rect x="49" y="46" width="12" height="9" rx="1.5" fill="#e9e9ed"></rect>
+    <path d="M50 46 V42 C50 39 52 37 55 37 C58 37 60 39 60 42 V46" fill="none" stroke="#e9e9ed" stroke-width="3"></path>
+  </svg>
+</template>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CyberScut — testare de penetrare și bug bounty pentru aplicații web, API-uri și rețele. Audituri de securitate ofensivă.">
+  <title>CyberScut — Penetration Tester &amp; Bug Bounty Hunter</title>
+  <link rel="stylesheet" href="_ds/nocturne-5f696f1c-9f0d-449e-b9a4-2ccd7ddf9f00/styles.css">
+  <script src="_ds/nocturne-5f696f1c-9f0d-449e-b9a4-2ccd7ddf9f00/_ds_bundle.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+  </style>
+  <script src="./image-slot.js"></script>
+</helmet>
+
+<div style="min-height:100vh;overflow-x:hidden">
+
+  <nav class="nav" style="position:sticky;top:0;z-index:10;background:rgba(22,24,38,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-divider);flex-wrap:wrap;row-gap:8px">
+    <a href="index.html" class="nav-brand" style="text-decoration:none;color:var(--color-text);display:flex;align-items:center;gap:8px">
+      <svg width="22" height="22" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 14 L90 25 V50 C90 76 77 92 60 100 C43 92 30 76 30 50 V25 Z" fill="none" stroke="#9184d9" stroke-width="6"></path>
+        <circle cx="55" cy="52" r="16" fill="none" stroke="#e9e9ed" stroke-width="6"></circle>
+        <line x1="66" y1="63" x2="78" y2="75" stroke="#e9e9ed" stroke-width="6" stroke-linecap="round"></line>
+        <rect x="49" y="46" width="12" height="9" rx="1.5" fill="#e9e9ed"></rect>
+        <path d="M50 46 V42 C50 39 52 37 55 37 C58 37 60 39 60 42 V46" fill="none" stroke="#e9e9ed" stroke-width="4"></path>
+      </svg>
+      CyberScut
+    </a>
+    <a href="index.html" aria-current="page">Acasă</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html" class="btn btn-primary" style="text-decoration:none">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <div style="display:flex;gap:var(--space-8);align-items:center;flex-wrap:wrap;padding:88px clamp(24px,6vw,96px) 80px;max-width:1100px">
+    <div style="flex:1;min-width:280px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-300);margin-bottom:var(--space-4)">PENETRATION TESTING/ BUG BOUNTY HUNTING</div>
+      <h1 style="margin:0 0 var(--space-4)">Protejează-ți website-ul de hackeri în 48 de ore – cu o singură plată.</h1>
+      <p style="max-width:520px;margin:0 0 var(--space-6)">
+        Scanare automatizată cu AI + verificare manuală de expert. Primești raport clar cu vulnerabilitățile găsite și pașii exacți pentru a le remedia. Fără abonament, fără surprize.
+      </p>
+      <div style="display:flex;gap:var(--space-3);flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-primary" style="text-decoration:none">Vreau securitate acum – $250</a>
+      </div>
+    </div>
+    <div style="flex:none;width:clamp(110px,20vw,180px);height:clamp(110px,20vw,180px);display:flex;align-items:center;justify-content:center">
+      <svg width="100%" height="100%" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 14 L90 25 V50 C90 76 77 92 60 100 C43 92 30 76 30 50 V25 Z" fill="none" stroke="#9184d9" stroke-width="4"></path>
+        <circle cx="55" cy="52" r="16" fill="none" stroke="#e9e9ed" stroke-width="4"></circle>
+        <line x1="66" y1="63" x2="78" y2="75" stroke="#e9e9ed" stroke-width="4" stroke-linecap="round"></line>
+        <rect x="49" y="46" width="12" height="9" rx="1.5" fill="#e9e9ed"></rect>
+        <path d="M50 46 V42 C50 39 52 37 55 37 C58 37 60 39 60 42 V46" fill="none" stroke="#e9e9ed" stroke-width="3"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- PACHET -->
+  <div style="padding:0 clamp(24px,6vw,96px) 80px;max-width:900px">
+    <div class="card elev-md" style="padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-6)">
+      <div>
+        <div class="card-kicker">Pachet</div>
+        <div class="card-title" style="font-size:26px">Securitate Instantanee — $250 (plată unică)</div>
+      </div>
+      <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.6;color:var(--color-text)">
+        <li>Scanare completă cu AI — testăm automat mii de tipare de vulnerabilități cunoscute (SQL injection, XSS, CSRF, file inclusion etc.), acoperind sute de categorii de risc conform standardelor OWASP.</li>
+        <li>Raport executiv, livrat în 48 de ore, în limba română — harta vulnerabilităților (CRITIC / ÎNALT / MEDIU / SCĂZUT / INFORMATIV), pași concreți de remediere pentru echipa de programare și screenshot-uri doveditoare pentru fiecare problemă identificată.</li>
+        <li>Verificare umană — fiecare rezultat este validat manual de un specialist, pentru a elimina falsurile pozitive; primești doar amenințări reale, confirmate.</li>
+        <li>Bonus: checklist de securitate post-scanare — 5 măsuri gratuite pe care le poți implementa imediat.</li>
+      </ul>
+      <div class="card-title" style="font-size:18px;margin-top:4px">💰 Preț: 249 EUR (fără TVA)</div>
+      <div style="padding:14px 18px;border-radius:8px;background:var(--color-accent-900);border:1px solid var(--color-accent-700)">
+        <span style="font-size:13.5px;color:var(--color-accent-100)">Garanție: dacă nu găsim cel puțin o vulnerabilitate reală, primești banii înapoi — fără discuții.</span>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="align-self:flex-start;text-decoration:none">Vreau securitate acum – $250</a>
+    </div>
+  </div>
+
+  <hr class="hr" style="margin:0 clamp(24px,6vw,96px)">
+
+  <!-- PENTRU CINE -->
+  <div style="padding:80px clamp(24px,6vw,96px);max-width:900px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-3)">PENTRU CINE ESTE ACEST PACHET</div>
+    <p style="font-size:18px;line-height:1.6;color:var(--color-text);margin:0 0 var(--space-8);max-width:640px">Dacă ai un magazin online, ești în vizorul hackerilor. Mai ales dacă folosești WooCommerce, Shopify sau Magento.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--space-8)">
+      <div>
+        <div style="font-weight:500;font-size:15px;margin-bottom:var(--space-4)">Acest pachet este pentru tine dacă:</div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.5">
+          <li style="display:flex;gap:10px"><span style="color:var(--color-accent)">✓</span><span>Ai un magazin online care procesează plăți cu cardul</span></li>
+          <li style="display:flex;gap:10px"><span style="color:var(--color-accent)">✓</span><span>Nu ai angajat vreodată un specialist în securitate</span></li>
+          <li style="display:flex;gap:10px"><span style="color:var(--color-accent)">✓</span><span>Vrei să dormi liniștit știind că datele clienților tăi sunt în siguranță</span></li>
+          <li style="display:flex;gap:10px"><span style="color:var(--color-accent)">✓</span><span>Vrei să eviți amenzile GDPR&nbsp; în cazul unui breach</span></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-weight:500;font-size:15px;margin-bottom:var(--space-4)">NU este pentru tine dacă:</div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.5;color:rgba(233,233,237,0.7)">
+          <li style="display:flex;gap:10px"><span>✕</span><span>Ai deja un test de penetrare făcut în ultimele 3 luni</span></li>
+          <li style="display:flex;gap:10px"><span>✕</span><span>Ai un specialist IT intern care face asta</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr" style="margin:0 clamp(24px,6vw,96px)">
+
+  <!-- DE CE SA AI INCREDERE -->
+  <div style="padding:80px clamp(24px,6vw,96px);max-width:760px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-3)">DE CE SĂ AI ÎNCREDERE</div>
+    <p style="font-size:20px;font-weight:500;line-height:1.5;color:var(--color-text);margin:0 0 var(--space-4)">Folosim aceleași tool-uri AI ca și companiile care cer $2,000/scanare</p>
+    <p style="font-size:15px;line-height:1.6;color:rgba(233,233,237,0.8);margin:0 0 var(--space-6)">Diferența? Noi nu taxam $2,000 pentru că:</p>
+    <ul style="margin:0 0 var(--space-6);padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.5">
+      <li style="display:flex;gap:10px"><span style="color:var(--color-accent)">✓</span><span>Avem acces la aceleași platforme de pentesting automatizat&nbsp;</span></li>
+      <li style="display:flex;gap:10px"><span style="color:var(--color-accent)">✓</span><span>Verificam manual fiecare alertă – elimin falsele pozitive ca un expert</span></li>
+      <li style="display:flex;gap:10px"><span style="color:var(--color-accent)">✓</span><span>Îți dam raportul în română, nu în jargon tehnic inutil</span></li>
+    </ul>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14.5px;line-height:1.6;color:rgba(233,233,237,0.8);margin-bottom:var(--space-4)">
+      <p style="margin:0">Ce primesc companiile mari la $2,000: același scan AI + raport în engleză.</p>
+      <p style="margin:0">Ce primești tu la $250: același scan AI + raport în română + verificare umană + remedieri clare.</p>
+    </div>
+    <p style="font-weight:500;font-size:16px;color:var(--color-text);margin:0">Economisești $1,750 și primești mai multă valoare.</p>
+  </div>
+
+  <hr class="hr" style="margin:0 clamp(24px,6vw,96px)">
+
+  <!-- FAQ -->
+  <div style="padding:80px clamp(24px,6vw,96px);max-width:800px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-3)">ÎNTREBĂRI FRECVENTE</div>
+    <h2 style="margin:0 0 var(--space-8)">Întrebări frecvente</h2>
+
+    <div style="display:flex;flex-direction:column">
+
+      <details style="padding:var(--space-6) 0;border-top:1px solid var(--color-divider)">
+        <summary style="cursor:pointer;font-weight:500;font-size:16px;color:var(--color-text)">Ce vulnerabilități poți găsi?</summary>
+        <div style="margin-top:var(--space-4);font-size:14.5px;line-height:1.65;color:rgba(233,233,237,0.8)">
+          <p style="margin:0 0 10px">Scanam automat peste 3.000+ vulnerabilități cunoscute, inclusiv:</p>
+          <ul style="margin:0 0 10px;padding-left:20px;display:flex;flex-direction:column;gap:6px">
+            <li><b style="color:var(--color-text)">SQL Injection</b> – hackerul poate fura baza ta de date cu clienți și comenzi</li>
+            <li><b style="color:var(--color-text)">XSS (Cross-Site Scripting)</b> – poate injecta cod rău intenționat în pagina ta</li>
+            <li><b style="color:var(--color-text)">CSRF</b> – poate face acțiuni în numele utilizatorilor logați</li>
+            <li><b style="color:var(--color-text)">File Inclusion</b> – poate accesa fișiere sensibile ale serverului</li>
+            <li><b style="color:var(--color-text)">Security Misconfigurations</b> – setări greșite care deschid uși hackerilor</li>
+            <li><b style="color:var(--color-text)">Plugin-uri vulnerabile</b> – cea mai comună cauză de breach la WooCommerce</li>
+          </ul>
+          <p style="margin:0">După scanare, primești doar vulnerabilitățile reale – eu elimin manual toate falsele pozitive.</p>
+        </div>
+      </details>
+
+      <details style="padding:var(--space-6) 0;border-top:1px solid var(--color-divider)">
+        <summary style="cursor:pointer;font-weight:500;font-size:16px;color:var(--color-text)">Trebuie să opresc magazinul în timpul scanării?</summary>
+        <div style="margin-top:var(--space-4);font-size:14.5px;line-height:1.65;color:rgba(233,233,237,0.8)">
+          <p style="margin:0 0 10px"><b style="color:var(--color-text)">NU.</b> Scanarea este complet non-intruzivă și se face pe fundal.</p>
+          <ul style="margin:0 0 10px;padding-left:20px;display:flex;flex-direction:column;gap:6px">
+            <li>Magazinul tău rămâne funcțional 100%</li>
+            <li>Clienții pot comanda în continuare</li>
+            <li>Nu afectează performanța sau viteza site-ului</li>
+          </ul>
+          <p style="margin:0">Este ca un test de stres – dar doar noi știm că are loc. Hackerii nu pot detecta scanarea.</p>
+        </div>
+      </details>
+
+      <details style="padding:var(--space-6) 0;border-top:1px solid var(--color-divider)">
+        <summary style="cursor:pointer;font-weight:500;font-size:16px;color:var(--color-text)">Ce fac după ce primesc raportul?</summary>
+        <div style="margin-top:var(--space-4);font-size:14.5px;line-height:1.65;color:rgba(233,233,237,0.8)">
+          <p style="margin:0 0 10px">Raportul vine în 48 de ore și conține:</p>
+          <ul style="margin:0 0 10px;padding-left:20px;display:flex;flex-direction:column;gap:6px">
+            <li><b style="color:var(--color-text)">Lista vulnerabilităților</b> – sortate după gravitate (critic/ridicat/mediu/scăzut)</li>
+            <li><b style="color:var(--color-text)">Pași concreți de remediere</b> – scris pentru tine sau programatorul tău. Exemplu: „În fișierul X, la linia Y, înlocuiește codul Z cu W”</li>
+            <li><b style="color:var(--color-text)">Screenshot-uri</b> – dovadă clară pentru fiecare problemă</li>
+          </ul>
+          <p style="margin:0">După ce remediezi, poți reveni cu un pachet de reverificare la jumătate de preț ($75) pentru a confirma că totul e sigur.</p>
+        </div>
+      </details>
+
+      <details style="padding:var(--space-6) 0;border-top:1px solid var(--color-divider)">
+        <summary style="cursor:pointer;font-weight:500;font-size:16px;color:var(--color-text)">Cât durează procesul complet?</summary>
+        <div style="margin-top:var(--space-4);font-size:14.5px;line-height:1.65;color:rgba(233,233,237,0.8)">
+          <ul style="margin:0 0 10px;padding-left:20px;display:flex;flex-direction:column;gap:6px">
+            <li><b style="color:var(--color-text)">Înscriere</b> – completezi un scurt formular (nume, URL magazin, platformă)</li>
+            <li><b style="color:var(--color-text)">Scanare</b> – durează între 2-8 ore (depinde de mărimea site-ului)</li>
+            <li><b style="color: var(--color-text);">Verificare umană</b> – analizam manual toate rezultatele (4-6 ore)</li>
+            <li><b style="color:var(--color-text)">Raport final</b> – îl primești în maxim 48 de ore de la comandă</li>
+          </ul>
+          <p style="margin:0">Total: de la plată la raport în 2 zile lucrătoare.</p>
+        </div>
+      </details>
+
+      <details style="padding:var(--space-6) 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+        <summary style="cursor:pointer;font-weight:500;font-size:16px;color:var(--color-text)">Ce se întâmplă dacă nu găsești nimic?</summary>
+        <div style="margin-top:var(--space-4);font-size:14.5px;line-height:1.65;color:rgba(233,233,237,0.8)">
+          <p style="margin:0 0 10px">Atunci primești banii înapoi 100% – fără întrebări, fără discuții.</p>
+          <p style="margin:0 0 10px">De ce oferim asta? Pentru că în peste 90% din cazuri găsesc cel puțin o vulnerabilitate reală. Magazinele online sunt rareori securizate complet.</p>
+          <p style="margin:0">Practic, tu nu ai nimic de pierdut – ori găsesc probleme și le rezolvi, ori primești banii înapoi.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <hr class="hr" style="margin:0 clamp(24px,6vw,96px)">
+
+  <!-- FINAL CTA -->
+  <div style="padding:64px clamp(24px,6vw,96px) 96px;max-width:900px">
+    <div class="card elev-md" style="padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-6);align-items:flex-start">
+      <p style="margin:0;font-size:16px;line-height:1.6;color:var(--color-text)">Nu aștepta să fii hackuit. Costul unui atac poate fi de zeci de mii de euro – pierdere de date, clienți, încredere și amenzi.</p>
+      <div class="card-title" style="font-size:24px">🔒 Pachetul „Securitate Instantanee” – $250 (plată unică)</div>
+      <a href="contact.html" class="btn btn-primary" style="text-decoration:none">Vreau raportul meu acum</a>
+      <div class="text-muted" style="font-size:13px">Plată securizată prin PayPal sau transfer bancar. Primești raportul în 48 de ore sau banii înapoi.</div>
+    </div>
+  </div>
+
+  <hr class="hr" style="margin:0 clamp(24px,6vw,96px)">
+  <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:space-between;align-items:center;padding:var(--space-6) clamp(24px,6vw,96px) 40px;font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(233,233,237,0.5)">
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center">
+      <span>© 2026 CyberScut</span>
+      <a href="privacy.html" style="color:rgba(233,233,237,0.5);text-decoration:none">Politica de Confidențialitate</a>
+      <a href="terms.html" style="color:rgba(233,233,237,0.5);text-decoration:none">Termeni și Condiții</a>
+    </div>
+    <div style="display:flex;gap:var(--space-4)">
+      <a href="#" style="color:rgba(233,233,237,0.5);text-decoration:none">GitHub</a>
+      <a href="#" style="color:rgba(233,233,237,0.5);text-decoration:none">X (Twitter)</a>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}"></script>
+</body>
+</html>

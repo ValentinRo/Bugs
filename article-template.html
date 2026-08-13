@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Titlul articolului — rezumat scurt pentru SEO, 1-2 fraze.">
+  <title>Titlul articolului — CyberScut</title>
+  <link rel="stylesheet" href="_ds/nocturne-5f696f1c-9f0d-449e-b9a4-2ccd7ddf9f00/styles.css">
+  <script src="_ds/nocturne-5f696f1c-9f0d-449e-b9a4-2ccd7ddf9f00/_ds_bundle.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+  </style>
+</helmet>
+
+<div style="min-height:100vh;overflow-x:hidden">
+
+  <nav class="nav" style="position:sticky;top:0;z-index:10;background:rgba(22,24,38,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-divider);flex-wrap:wrap;row-gap:8px">
+    <a href="index.html" class="nav-brand" style="text-decoration:none;color:var(--color-text);display:flex;align-items:center;gap:8px">
+      <svg width="22" height="22" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 14 L90 25 V50 C90 76 77 92 60 100 C43 92 30 76 30 50 V25 Z" fill="none" stroke="#9184d9" stroke-width="6"></path>
+        <circle cx="55" cy="52" r="16" fill="none" stroke="#e9e9ed" stroke-width="6"></circle>
+        <line x1="66" y1="63" x2="78" y2="75" stroke="#e9e9ed" stroke-width="6" stroke-linecap="round"></line>
+        <rect x="49" y="46" width="12" height="9" rx="1.5" fill="#e9e9ed"></rect>
+        <path d="M50 46 V42 C50 39 52 37 55 37 C58 37 60 39 60 42 V46" fill="none" stroke="#e9e9ed" stroke-width="4"></path>
+      </svg>
+      CyberScut
+    </a>
+    <a href="index.html">Acasă</a>
+    <a href="blog.html" aria-current="page">Blog</a>
+    <a href="contact.html" class="btn btn-primary" style="text-decoration:none">Contact</a>
+  </nav>
+
+  <div style="padding:72px clamp(24px,6vw,96px) 0;max-width:720px">
+    <a href="blog.html" style="font-size:13px;text-decoration:none">← Toate articolele</a>
+    <div class="card-kicker" style="margin-top:var(--space-6)">Categorie · Severitate</div>
+    <h1 style="margin:0 0 var(--space-3)">Titlul articolului</h1>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(233,233,237,0.5);margin-bottom:var(--space-8)">Ian 2026 · 6 min citire</div>
+  </div>
+
+  <div style="padding:0 clamp(24px,6vw,96px) 96px;max-width:720px;display:flex;flex-direction:column;gap:var(--space-6);font-size:15.5px;line-height:1.7;color:rgba(233,233,237,0.85)">
+
+    <p>Paragraf introductiv — context și de ce este relevant articolul.</p>
+
+    <h2 style="margin:var(--space-4) 0 0;color:var(--color-text)">Subtitlu secțiune</h2>
+    <p>Conținutul secțiunii. Înlocuiește cu textul real al articolului.</p>
+
+    <pre style="background:#1c1e2c;border:1px solid var(--color-divider);border-radius:8px;padding:var(--space-4);overflow-x:auto;font-family:'JetBrains Mono',monospace;font-size:13px;color:#e9e9ed;margin:0"><code>// exemplu de cod / payload
+GET /api/user?id=1' OR '1'='1</code></pre>
+
+    <h2 style="margin:var(--space-4) 0 0;color:var(--color-text)">Impact</h2>
+    <p>Descrie impactul vulnerabilității sau al temei discutate.</p>
+
+    <h2 style="margin:var(--space-4) 0 0;color:var(--color-text)">Remediere</h2>
+    <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px">
+      <li>Pas de remediere 1</li>
+      <li>Pas de remediere 2</li>
+    </ul>
+
+  </div>
+
+  <hr class="hr" style="margin:0 clamp(24px,6vw,96px)">
+  <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:space-between;align-items:center;padding:var(--space-6) clamp(24px,6vw,96px) 40px;font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(233,233,237,0.5)">
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center">
+      <span>© 2026 CyberScut</span>
+      <a href="privacy.html" style="color:rgba(233,233,237,0.5);text-decoration:none">Politica de Confidențialitate</a>
+      <a href="terms.html" style="color:rgba(233,233,237,0.5);text-decoration:none">Termeni și Condiții</a>
+    </div>
+    <div style="display:flex;gap:var(--space-4)">
+      <a href="#" style="color:rgba(233,233,237,0.5);text-decoration:none">GitHub</a>
+      <a href="#" style="color:rgba(233,233,237,0.5);text-decoration:none">X (Twitter)</a>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}"></script>
+</body>
+</html>
