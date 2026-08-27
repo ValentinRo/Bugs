@@ -49,11 +49,25 @@
         <a href="#" style="text-decoration:none;color:var(--color-text)">X (Twitter)</a>
       </div>
 
-      <div class="card elev-sm" style="padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4);max-width:380px">
+      <div class="card elev-sm" style="padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4);max-width:420px">
         <div class="card-title" style="font-size:17px">Pachetul „Securitate Instantanee” — 249 EUR</div>
         <div class="card-body">Plată securizată, o singură dată. Primești raportul în 48 de ore sau banii înapoi.</div>
-        <a href="#" class="btn btn-primary" style="text-decoration:none;align-self:flex-start">Plătește cu cardul – 249 EUR</a>
-        <div style="font-size:12px;color:rgba(233,233,237,0.5)">Plată procesată securizat via Stripe. Link-ul se activează după configurarea contului de plăți.</div>
+
+        <div style="display:flex;flex-direction:column;gap:8px;padding:var(--space-4) 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent)">Documente obligatorii</div>
+          <div class="card-body" style="margin-bottom:4px">Descarcă, citește și semnează documentele înainte de plată. Testarea nu poate începe fără acordul de autorizare semnat.</div>
+          <a href="docs/Acord_Autorizare_Testare_CyberScut.docx" download="" style="font-size:13.5px;text-decoration:none">↓ Acord de autorizare a testării (DOCX)</a>
+          <a href="docs/Acord_Autorizare_Testare_CyberScut_Simplificat.docx" download="" style="font-size:13.5px;text-decoration:none">↓ Acord de autorizare — versiune simplificată (DOCX)</a>
+          <a href="docs/Politica_Confidentialitate_CyberScut.docx" download="" style="font-size:13.5px;text-decoration:none">↓ Politica de confidențialitate (DOCX)</a>
+        </div>
+
+        <label style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5;cursor:pointer">
+          <input type="checkbox" checked="{{ acceptat }}" onChange="{{ toggleAccept }}" style="margin-top:3px;accent-color:#9184d9;width:16px;height:16px;flex:none">
+          <span>Am descărcat, citit și semnat acordul de autorizare a testării și am luat la cunoștință politica de confidențialitate.</span>
+        </label>
+
+        <a href="{{ linkPlata }}" class="btn btn-primary" aria-disabled="{{ blocat }}" style="{{ stilButon }}">Plătește cu cardul – 249 EUR</a>
+        <div style="font-size:12px;color:rgba(233,233,237,0.5)">Plată procesată securizat via Stripe. Link-ul se activează după configurarea contului de plăți. Documentele semnate se trimit la contact@cyberscut.ro.</div>
       </div>
     </div>
 
@@ -91,6 +105,18 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}"></script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">class Component extends DCLogic {
+  state = { acceptat: false };
+  renderVals() {
+    const a = this.state.acceptat;
+    return {
+      acceptat: a,
+      blocat: !a,
+      linkPlata: a ? "#" : undefined,
+      stilButon: "text-decoration:none;align-self:flex-start;" + (a ? "" : "opacity:0.45;pointer-events:none;cursor:not-allowed;"),
+      toggleAccept: () => this.setState(s => ({ acceptat: !s.acceptat }))
+    };
+  }
+}</script>
 </body>
 </html>

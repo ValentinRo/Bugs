@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articol — CyberScut</title>
+<link rel="stylesheet" href="_ds/nocturne-5f696f1c-9f0d-449e-b9a4-2ccd7ddf9f00/styles.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+  #corp h2 { font-size: 22px; margin: 28px 0 0; color: var(--color-text); }
+  #corp h3 { font-size: 18px; margin: 24px 0 0; color: var(--color-text); }
+  #corp p, #corp ul, #corp ol { margin: 0; }
+  #corp ul, #corp ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+  #corp pre { background:#1c1e2c; border:1px solid var(--color-divider); border-radius:8px; padding:16px; overflow-x:auto; font-family:'JetBrains Mono',monospace; font-size:13px; margin:0; }
+  #corp code { font-family:'JetBrains Mono',monospace; font-size:0.92em; }
+  #corp img { max-width:100%; border-radius:8px; }
+</style>
+</head>
+<body>
+
+<div style="min-height:100vh;overflow-x:hidden">
+
+  <nav class="nav" style="position:sticky;top:0;z-index:10;background:rgba(22,24,38,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-divider);flex-wrap:wrap;row-gap:8px">
+    <a href="index.html" class="nav-brand" style="text-decoration:none;color:var(--color-text);display:flex;align-items:center;gap:8px">
+      <svg width="22" height="22" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 14 L90 25 V50 C90 76 77 92 60 100 C43 92 30 76 30 50 V25 Z" fill="none" stroke="#9184d9" stroke-width="6"></path>
+        <circle cx="55" cy="52" r="16" fill="none" stroke="#e9e9ed" stroke-width="6"></circle>
+        <line x1="66" y1="63" x2="78" y2="75" stroke="#e9e9ed" stroke-width="6" stroke-linecap="round"></line>
+        <rect x="49" y="46" width="12" height="9" rx="1.5" fill="#e9e9ed"></rect>
+        <path d="M50 46 V42 C50 39 52 37 55 37 C58 37 60 39 60 42 V46" fill="none" stroke="#e9e9ed" stroke-width="4"></path>
+      </svg>
+      CyberScut
+    </a>
+    <a href="index.html">Acasă</a>
+    <a href="blog.html" aria-current="page">Blog</a>
+    <a href="contact.html" class="btn btn-primary" style="text-decoration:none">Contact</a>
+  </nav>
+
+  <div style="padding:72px clamp(24px,6vw,96px) 0;max-width:720px">
+    <a href="blog.html" style="font-size:13px;text-decoration:none">← Toate articolele</a>
+    <div id="kicker" class="card-kicker" style="margin-top:var(--space-6)"></div>
+    <h1 id="titlu" style="margin:0 0 var(--space-3)">Se încarcă…</h1>
+    <div id="meta" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(233,233,237,0.5);margin-bottom:var(--space-8)"></div>
+  </div>
+
+  <div id="corp" style="padding:0 clamp(24px,6vw,96px) 96px;max-width:720px;display:flex;flex-direction:column;gap:var(--space-6);font-size:15.5px;line-height:1.7;color:rgba(233,233,237,0.85)"></div>
+
+  <hr class="hr" style="margin:0 clamp(24px,6vw,96px)">
+  <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);justify-content:space-between;align-items:center;padding:var(--space-6) clamp(24px,6vw,96px) 40px;font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(233,233,237,0.5)">
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center">
+      <span>© 2026 CyberScut</span>
+      <a href="privacy.html" style="color:rgba(233,233,237,0.5);text-decoration:none">Politica de Confidențialitate</a>
+      <a href="terms.html" style="color:rgba(233,233,237,0.5);text-decoration:none">Termeni și Condiții</a>
+    </div>
+    <div style="display:flex;gap:var(--space-4)">
+      <a href="#" style="color:rgba(233,233,237,0.5);text-decoration:none">GitHub</a>
+      <a href="#" style="color:rgba(233,233,237,0.5);text-decoration:none">X (Twitter)</a>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+<script>
+(async function () {
+  var LUNI = ['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','august','septembrie','octombrie','noiembrie','decembrie'];
+  var slug = new URLSearchParams(location.search).get('slug') || '';
+
+  if (!/^[A-Za-z0-9._-]+$/.test(slug)) {
+    document.getElementById('titlu').textContent = 'Articol inexistent';
+    return;
+  }
+
+  var r = await fetch('content/blog/' + slug + '.md', { cache: 'no-cache' });
+  if (!r.ok) {
+    document.getElementById('titlu').textContent = 'Articol inexistent';
+    return;
+  }
+  var text = await r.text();
+
+  var meta = {}, corp = text;
+  var m = /^---\s*\n([\s\S]*?)\n---\s*\n?/.exec(text);
+  if (m) {
+    corp = text.slice(m[0].length);
+    m[1].split('\n').forEach(function (linie) {
+      var i = linie.indexOf(':');
+      if (i < 0) return;
+      meta[linie.slice(0, i).trim()] = linie.slice(i + 1).trim().replace(/^["']|["']$/g, '');
+    });
+  }
+
+  document.title = (meta.title || 'Articol') + ' — CyberScut';
+  document.getElementById('titlu').textContent = meta.title || 'Articol';
+  document.getElementById('kicker').textContent = meta.category || '';
+
+  var d = new Date(meta.date);
+  var dataLunga = isNaN(d) ? (meta.date || '') : (d.getDate() + ' ' + LUNI[d.getMonth()] + ' ' + d.getFullYear());
+  document.getElementById('meta').textContent = [dataLunga, meta.readingTime].filter(Boolean).join(' · ');
+
+  document.getElementById('corp').innerHTML = DOMPurify.sanitize(marked.parse(corp));
+})();
+</script>
+
+</body>
+</html>
