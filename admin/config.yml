@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: ValentinRo/Bugs
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: blog
+    label: Articole
+    label_singular: Articol
+    folder: content/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Titlu, widget: string }
+      - { name: date, label: Data, widget: datetime, format: "YYYY-MM-DD" }
+      - { name: category, label: Categorie, widget: string, required: false, hint: "ex. Web · Critical" }
+      - { name: summary, label: Rezumat, widget: text, hint: "1-2 fraze, apar pe pagina Blog și în meta description" }
+      - { name: readingTime, label: Timp de citire, widget: string, required: false, hint: "ex. 6 min citire" }
+      - { name: draft, label: Ciornă (nu se publică), widget: boolean, default: false, required: false }
+      - { name: body, label: Conținut, widget: markdown }
